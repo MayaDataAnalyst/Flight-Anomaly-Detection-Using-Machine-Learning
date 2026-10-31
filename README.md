@@ -37,7 +37,6 @@ The comparative analysis demonstrated that **XGBoost achieved the highest predic
 
 Among the six candidate models, **XGBoost demonstrated the strongest overall performance**, achieving the highest F1-score (**0.790**) while maintaining high Precision (**0.821**) and Recall (**0.762**). Accordingly, **XGBoost was selected as the final model** for anomaly detection. However, **Balanced Random Forest (BRF)** achieved the highest Recall (**0.921**) and may be preferable in cases where minimizing missed anomalies is prioritized over reducing false-positive detections.
 
-<h3 align="center">Comparative Performance of Machine Learning Models</h3>
 <img width="1189" height="590" alt="Model GOF Measures" src="https://github.com/user-attachments/assets/0609eedb-d15f-4363-9f43-8ea0fc3b6183" />
 
 ---
