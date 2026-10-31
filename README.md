@@ -22,6 +22,8 @@ Among the six candidate models, **XGBoost demonstrated the strongest overall per
 
 <img width="1189" height="590" alt="Model GOF Measures" src="https://github.com/user-attachments/assets/0609eedb-d15f-4363-9f43-8ea0fc3b6183" />
 
+<img width="858" height="390" alt="XGBoost GOF" src="https://github.com/user-attachments/assets/5f91860d-3548-4e3b-95ab-d414bf111435" />
+
 ---
 
 The **SHAP analysis** identified `airspeed_mean` as the most influential predictor, followed by `tot_pressure_std`, `altitude_std`, and `airspeed_std`. Higher values of `airspeed_mean` and `altitude_std` were generally associated with **increased anomaly predictions**, whereas higher values of `tot_pressure_std` and `airspeed_std` were associated with **decreased anomaly predictions**. Overall, the results highlight **airspeed, total-pressure variability, and altitude variability** as key contributors to the XGBoost anomaly predictions.
