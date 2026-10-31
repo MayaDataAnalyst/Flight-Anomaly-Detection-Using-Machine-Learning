@@ -190,7 +190,7 @@ The project uses Python and the following main libraries:
 
 ### **2. Dataset**
 
-The dataset is available through the NASA DASHlink repository.
+The dataset is publicly available through the **[NASA DASHlink repository](https://c3.nasa.gov/dashlink/projects/85/)**.
 
 The analysis uses two primary input files:
 
