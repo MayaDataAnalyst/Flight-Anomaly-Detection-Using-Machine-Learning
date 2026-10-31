@@ -15,6 +15,9 @@ The second objective was to determine the factors contributing to the risk of fl
 | 3 | Flaps Late Setting | 954 | Anomaly Class |
 | **Total** | | **99,837** | |
 
+<br>
+<br>
+
 **Reshaping Flight Data from a 3D Array into a 2D DataFrame**
 <img width="800" height="500" alt="3D-to-2D Data Conversion" src="https://github.com/user-attachments/assets/51725313-d176-4285-8339-8c649409f06a" />
 
