@@ -18,7 +18,7 @@ The second objective was to determine the factors contributing to the risk of fl
 <br>
 <br>
 
-**Reshaping Flight Data from a 3D Array into a 2D DataFrame**
+**Reshaping Flight Data from a 3D Array into a 2D DataFrame:**
 <img width="800" height="500" alt="3D-to-2D Data Conversion" src="https://github.com/user-attachments/assets/51725313-d176-4285-8339-8c649409f06a" />
 
 
