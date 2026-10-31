@@ -3,7 +3,7 @@
 The primary objective of this proejct was to to develop and compare different machine learning models to detect flight anomalies for commercial aircraft.
 The second objective was to determine the factors contributing to the risk of flight anomalies. The project used the **NASA DASHlink Multi-Class Anomaly Classification Dataset**. The dataset was made publicly available through NASA's DASHlink repository. It contains flight trajectories during approach to landing classified as **Nominal, Speed High, Path High, and Flaps Late**. For this project, the three anomalous classes were combined into a single anomaly class to formulate the problem as binary anomaly detection. The time-series observations for each flight were then aggregated into flight-level features using the **mean and standard deviation** of the selected flight variables. Exploratory data analysis showed that anomalous flights accounted for **10%** of the total observations, indicating that the resulting binary target variable was **imbalanced**. 
 
-<img width="700" height="500" alt="Image" src="https://github.com/user-attachments/assets/289b0b5c-6cbf-47bf-aca1-debb378002e6" />
+<img width="700" height="300" alt="Image" src="https://github.com/user-attachments/assets/289b0b5c-6cbf-47bf-aca1-debb378002e6" />
 
 Several supervised and unsupervised machine learning algorithms were fitted and compared, including:  
 
