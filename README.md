@@ -23,7 +23,7 @@ Among the six candidate models, **XGBoost demonstrated the strongest overall per
 <img width="1189" height="590" alt="Model GOF Measures" src="https://github.com/user-attachments/assets/0609eedb-d15f-4363-9f43-8ea0fc3b6183" />
 
 ---
-**XGBoost Model Performance: Confusion Matrix and Precision–Recall Curve**
+<h3 align="center">XGBoost Model Performance: Confusion Matrix and Precision–Recall Curve</h3>
 <img width="858" height="390" alt="XGBoost GOF" src="https://github.com/user-attachments/assets/5f91860d-3548-4e3b-95ab-d414bf111435" />
 
 ---
