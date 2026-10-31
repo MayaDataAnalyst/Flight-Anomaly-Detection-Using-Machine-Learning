@@ -32,7 +32,7 @@ The **SHAP analysis** identified `airspeed_mean` as the most influential predict
 
 ---
 
-**Project Merit**
+## **Project Merit**
 
 The primary contribution of this project is that it has incorporated **arrival airport** and **runway** into the predictive model as contextual features. This distinguishes it from prior studies that relied primarily on flight-specific characteristics. The inclusion of the two factors above improved prediction performance by **about 10%**.
 
