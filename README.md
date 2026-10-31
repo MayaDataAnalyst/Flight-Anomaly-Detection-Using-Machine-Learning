@@ -5,6 +5,17 @@ The second objective was to determine the factors contributing to the risk of fl
 
 <img width="700" height="300" alt="Image" src="https://github.com/user-attachments/assets/289b0b5c-6cbf-47bf-aca1-debb378002e6" />
 
+### **Target Variable Distribution and Binary Classification**
+
+| Class Index | Original Class | Count | Binary Outcome |
+|:-----------:|--------------------|------:|----------------|
+| 0 | Nominal | 89,663 | Normal Class |
+| 1 | Speed High | 7,013 | Anomaly Class |
+| 2 | Path High | 2,207 | Anomaly Class |
+| 3 | Flaps Late Setting | 954 | Anomaly Class |
+| **Total** | | **99,837** | |
+
+
 <img width="1200" height="800" alt="3D-to-2D Data Conversion" src="https://github.com/user-attachments/assets/51725313-d176-4285-8339-8c649409f06a" />
 
 
@@ -49,23 +60,7 @@ Another contribution of this project is the application of **SHAP (SHapley Addit
 
 ---
 
-## **Dataset Description**
-
-### **Target Variable Distribution and Binary Classification**
-
-| Class Index | Original Class | Count | Binary Outcome |
-|:-----------:|--------------------|------:|----------------|
-| 0 | Nominal | 89,663 | Normal Class |
-| 1 | Speed High | 7,013 | Anomaly Class |
-| 2 | Path High | 2,207 | Anomaly Class |
-| 3 | Flaps Late Setting | 954 | Anomaly Class |
-| **Total** | | **99,837** | |
-
----
----
-
-
-### **Flight Features Used for Anomaly Detection**
+## **Flight Features Used for Anomaly Detection**
 It should be noted that the flap position (`flap_pos`) variable and its derived features (mean and standard deviation) were excluded to prevent potential target leakage, as flap position is directly associated with the definition of the **late-flap anomaly**. An initial analysis showed that **`flap_pos_mean` had the strongest influence on the binary anomaly response**, likely due to its direct relationship with late-flap settings. Therefore, **`flap_pos` and its derived features were excluded from the final model development.**
 
 
