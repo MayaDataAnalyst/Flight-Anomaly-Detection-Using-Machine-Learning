@@ -136,6 +136,51 @@ It should be noted that the flap position (`flap_pos`) variable and its derived 
 | arrival_runway | Runway used or assigned for the aircraft's arrival |  
 
 ---
+
+
+## **Getting Started: Reproducing the Analysis**
+
+The analysis was conducted using Python and the NASA DASHlink Multi-Class Anomaly Classification Dataset. The following steps outline how to reproduce the data preprocessing, feature engineering, model training, and evaluation procedures.
+
+### **1. Requirements**
+
+The project uses Python and the following main libraries:
+
+- NumPy
+- Pandas
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Imbalanced-learn
+- XGBoost
+- SHAP
+- TensorFlow / Keras
+
+### **2. Dataset**
+
+The dataset is available through the NASA DASHlink repository.
+
+The analysis uses two primary input files:
+
+- `DASHlink_full_fourclass_raw_comp.npz` — Flight trajectory data and anomaly labels.
+- `DASHlink_full_fourclass_raw_meta.csv` — Flight metadata, including arrival airport and runway information.
+
+Download the dataset from its original source and place the required files in the working directory.
+
+### **3. Running the Analysis**
+
+1. Download or clone this GitHub repository.
+2. Install the required Python libraries.
+3. Download the NASA DASHlink dataset.
+4. Update the dataset file paths in the Python script or Jupyter Notebook.
+5. Run the analysis to reproduce the data preprocessing, feature engineering, model development, and evaluation results.
+
+### **4. Model Evaluation**
+
+The project evaluates the classification models using precision, recall, and F1-score, with particular emphasis on detecting anomalous flights. SHAP analysis is used to interpret the final XGBoost model and identify influential predictors.
+
+
+---
 ---
 # **RECOMMENDATIONS FOR FUTURE WORK**
 
