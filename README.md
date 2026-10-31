@@ -137,7 +137,6 @@ It should be noted that the flap position (`flap_pos`) variable and its derived 
 
 
 ---
----
 # **RECOMMENDATIONS FOR FUTURE WORK**
 
 Future work could benefit from incorporating additional **airport-specific operational characteristics** into the prediction models, such as airport traffic volume, number of runways, runway configuration, and weather conditions. These factors may influence the likelihood and characteristics of flight anomalies. In addition, incorporating **aircraft-specific characteristics**, such as aircraft model, aircraft age, and engine type, may further improve model performance, as different aircraft types may exhibit different approach dynamics, deceleration behavior, and flap-deployment procedures.
@@ -168,7 +167,7 @@ Memarzadeh, M., Matthews, B. and Templin, T., 2022. Multiclass anomaly detection
 
 Shaheed, M.S., Gkritza, K., Carriquiry, A.L. and Hallmark, S.L., 2016. Analysis of occupant injury severity in winter weather crashes: A fully Bayesian multivariate approach. Analytic methods in accident research, 11, pp.33-47.
 
----
+
 ---
 
 ## **Getting Started: Reproducing the Analysis**
