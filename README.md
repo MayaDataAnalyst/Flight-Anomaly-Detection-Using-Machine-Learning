@@ -20,10 +20,15 @@ The comparative analysis demonstrated that **XGBoost achieved the highest predic
 
 Among the six candidate models, **XGBoost demonstrated the strongest overall performance**, achieving the highest F1-score (**0.790**) while maintaining high Precision (**0.821**) and Recall (**0.762**). Accordingly, **XGBoost was selected as the final model** for anomaly detection. However, **Balanced Random Forest (BRF)** achieved the highest Recall (**0.921**) and may be preferable in cases where minimizing missed anomalies is prioritized over reducing false-positive detections.
 
+<img width="1189" height="590" alt="Model GOF Measures" src="https://github.com/user-attachments/assets/0609eedb-d15f-4363-9f43-8ea0fc3b6183" />
+
 ---
 
 The **SHAP analysis** identified `airspeed_mean` as the most influential predictor, followed by `tot_pressure_std`, `altitude_std`, and `airspeed_std`. Higher values of `airspeed_mean` and `altitude_std` were generally associated with **increased anomaly predictions**, whereas higher values of `tot_pressure_std` and `airspeed_std` were associated with **decreased anomaly predictions**. Overall, the results highlight **airspeed, total-pressure variability, and altitude variability** as key contributors to the XGBoost anomaly predictions.
 
+<img width="875" height="799" alt="SHAP Barplot" src="https://github.com/user-attachments/assets/7fdfd70d-5db3-4669-97a7-43fe596a2433" />
+
+<img width="817" height="651" alt="SHA Beeswarm Plot" src="https://github.com/user-attachments/assets/6c146ee8-3cff-4966-9e84-4ea665640af8" />
 
 ---
 
@@ -100,4 +105,36 @@ It should be noted that the flap position (`flap_pos`) variable and its derived 
 | wind_speed_std | Standard deviation of wind speed (knots) |
 | arrival_airport | Arrival airport associated with the flight |
 | arrival_runway | Runway used or assigned for the aircraft's arrival |  
+
+---
+---
+# **RECOMMENDATIONS FOR FUTURE WORK**
+
+Future work could benefit from incorporating additional **airport-specific operational characteristics** into the prediction models, such as airport traffic volume, number of runways, runway configuration, and weather conditions. These factors may influence the likelihood and characteristics of flight anomalies. In addition, incorporating **aircraft-specific characteristics**, such as aircraft model, aircraft age, and engine type, may further improve model performance, as different aircraft types may exhibit different approach dynamics, deceleration behavior, and flap-deployment procedures.
+
+A primary direction for future work is to investigate the **three anomaly categories separately: Speed High, Path High, and Flaps Late**. In the present study, these categories were combined into a single anomaly class to formulate the problem as a binary anomaly-detection task. Although this approach simplified model development and enabled an overall assessment of anomalous versus normal flights, combining the three categories resulted in the loss of **anomaly-type-specific information**. In particular, the predictors and operational conditions associated with one type of anomaly may differ from those associated with another. Future work will therefore develop **multiclass classification models**, e.g., multinomial logistic regression model, to distinguish among normal flights and the three individual anomaly categories **(Speed High, Path High, and Flaps Late)**. This approach could provide a more detailed understanding of the contributing factors associated with each type of anomalous flight behavior.
+
+A second direction for future work is to preserve the **temporal structure of the flight trajectories**. In the present study, approximately 160 time-stamped observations within each flight trajectory were aggregated into flight-level features using summary statistics such as the **mean and standard deviation**. While this aggregation provides a compact representation of each flight and facilitates the application of conventional machine-learning models, it may obscure important temporal patterns, short-duration deviations, and the sequence of events occurring during the flight. Future work will therefore investigate the use of the **unaggregated time-series data** and develop a sequential anomaly-detection model, such as an **LSTM-based autoencoder (Long Short-Term Memory Autoencoder)**. The predictive performance of the LSTM autoencoder can then be compared with the machine-learning and autoencoder models developed in the present study to determine whether explicitly modeling the temporal dynamics of the flight trajectories improves anomaly detection.
+
+---
+# **REFERENCES**
+
+Campesato, O. (2023). Python 3 and Feature Engineering.
+
+Galli, S. (2020). Python feature engineering cookbook. Packt Publishing.
+
+Galli, S. (2021). Feature-engine: A Python package for feature engineering for machine learning. Journal of Open Source Software, 6(65), p.3642.
+
+Hosseinpour, M., Sahebi, S., Zamzuri, Z. H., Yahaya, A. S., & Ismail, N. (2018). Predicting crash frequency for multi-vehicle collision types using multivariate Poisson-lognormal spatial model: A comparative analysis. *Accident Analysis & Prevention, 118*, 277–288. [Link](https://www.sciencedirect.com/science/article/abs/pii/S0001457518301878)
+
+
+Hosseinpour, M., Madsen, T. K. O., Olesen, A. V., & Lahrmann, H. (2021). An in-depth analysis of self-reported cycling injuries in single and multiparty bicycle crashes in Denmark. *Journal of Safety Research, 77*, 114–124. [Link](https://www.sciencedirect.com/science/article/abs/pii/S0022437521000244)
+
+Lee, H., Li, G., Rai, A. and Chattopadhyay, A., 2020. Real-time anomaly detection framework using a support vector regression for the safety monitoring of commercial aircraft. Advanced Engineering Informatics, 44, p.101071.
+
+Kim, M., Kho, S.Y. and Kim, D.K., 2017. Hierarchical ordered model for injury severity of pedestrian crashes in South Korea. Journal of safety research, 61, pp.33-40.
+
+Memarzadeh, M., Matthews, B. and Templin, T., 2022. Multiclass anomaly detection in flight data using semi-supervised explainable deep learning model. Journal of Aerospace Information Systems, 19(2), pp.83-97.
+
+Shaheed, M.S., Gkritza, K., Carriquiry, A.L. and Hallmark, S.L., 2016. Analysis of occupant injury severity in winter weather crashes: A fully Bayesian multivariate approach. Analytic methods in accident research, 11, pp.33-47.
 
