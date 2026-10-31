@@ -52,7 +52,27 @@ The **SHAP analysis** identified `airspeed_mean` as the most influential predict
 <br>
 <br>
 
-<img width="817" height="651" alt="SHA Beeswarm Plot" src="https://github.com/user-attachments/assets/6c146ee8-3cff-4966-9e84-4ea665640af8" />
+<img width="817" height="651" alt="SHAP Beeswarm Plot" src="https://github.com/user-attachments/assets/6c146ee8-3cff-4966-9e84-4ea665640af8" />
+
+###**SHAP Feature Interpretation Based On SHAP Beeswarm Plot**
+
+| Feature | Relative Importance | Effect of Higher Feature Values | Interpretation |
+|---|---|---|---|
+| `airspeed_mean` | Very High | ↑ Anomaly prediction | Higher mean airspeed generally increase the model output toward the anomaly class, while lower values have the opposite impact. |
+| `tot_pressure_std` | Very High | ↓ Anomaly prediction | Higher variability in total pressure is associated with negative SHAP values, while lower values strongly increase the model output toward the anomaly class. |
+| `altitude_std` | High | ↑ Anomaly prediction | Higher altitude variability increases the model output toward the anomaly class, whereas lower variability tends to decrease it. |
+| `airspeed_std` | High | ↓ Anomaly prediction | Higher airspeed variability is mainly associated with negative SHAP values, while lower variability tends to increase the anomaly prediction. |
+| `aoa_std` | Moderate–High | ↑ Anomaly prediction | Higher variability in angle of attack increases the model output toward the anomaly class. |
+| `core_speed_std` | Moderate | ↓ Anomaly prediction | Higher core-speed variability generally decreases the model output, while lower values tend to increase it. |
+| `sel_course_mean` | Moderate | Mixed / nonlinear | Most observations have relatively small effects, although some intermediate feature values produce large positive SHAP values. The relationship does not appear strongly monotonic. |
+| `aoa_mean` | Moderate | ↓ Anomaly prediction | Lower mean angle-of-attack values are associated with relatively large positive SHAP values, while higher values generally decrease the anomaly prediction. |
+| `core_speed_mean` | Moderate | ↓ Anomaly prediction | Lower mean core-speed values tend to increase the model output, while higher values generally decrease it. |
+| `sel_heading_mean` | Moderate | Mixed / nonlinear | Most observations have limited influence, but some intermediate values produce relatively large positive SHAP values. |
+| `arr_arpt_rnwy` | Lower–Moderate | Category-dependent | Some encoded airport-runway values increase the model output substantially, while others have little or negative influence, indicating that anomaly predictions vary across airport-runway contexts. |
+| `pitch_angle_mean` | Lower | Mixed | The effect is concentrated near zero, with some observations producing positive or negative contributions depending on feature value. |
+| `gl_slp_dev_std` | Lower | Mixed | Most effects are relatively small, although some higher values are associated with positive contributions to anomaly prediction. |
+| `pitch_angle_std` | Lower | ↑ Anomaly prediction | Higher pitch-angle variability generally tends to increase the model output, although its overall contribution is relatively small. |
+| `tot_pressure_mean` | Lower | ↑ Anomaly prediction | Higher mean total pressure generally produces positive SHAP values, while lower values tend to decrease the model output; its overall importance is relatively small. |
 
 ---
 
