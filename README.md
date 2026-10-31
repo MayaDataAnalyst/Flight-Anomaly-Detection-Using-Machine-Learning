@@ -33,7 +33,7 @@ Several supervised and unsupervised machine learning algorithms were fitted and 
 
 The training set was used for model development and hyperparameter tuning, while the test set was reserved for final performance evaluation. Model performance was assessed using three widely adopted classification metrics: **precision**, **recall**, and **F1-score**. Given the class imbalance in the dataset, particular emphasis was placed on recall and F1-score, as they provide more informative measures of the model’s ability to identify the minority (anomaly) class than overall classification accuracy.  
 
-The comparative analysis demonstrated that **XGBoost achieved the highest predictive performance**, closely followed by the **Neural Network** and **Balanced Random Forest** models, highlighting the effectiveness of ensemble and deep learning approaches for this regression task.  
+The comparative analysis demonstrated that **XGBoost achieved the highest predictive performance**, closely followed by the **Neural Network** and **Balanced Random Forest** models, highlighting the effectiveness of ensemble and deep learning approaches for this classification task.  
 
 Among the six candidate models, **XGBoost demonstrated the strongest overall performance**, achieving the highest F1-score (**0.790**) while maintaining high Precision (**0.821**) and Recall (**0.762**). Accordingly, **XGBoost was selected as the final model** for anomaly detection. However, **Balanced Random Forest (BRF)** achieved the highest Recall (**0.921**) and may be preferable in cases where minimizing missed anomalies is prioritized over reducing false-positive detections.
 
