@@ -5,6 +5,9 @@ The second objective was to determine the factors contributing to the risk of fl
 
 <img width="700" height="300" alt="Image" src="https://github.com/user-attachments/assets/289b0b5c-6cbf-47bf-aca1-debb378002e6" />
 
+<img width="1536" height="1024" alt="3D-to-2D Data Conversion" src="https://github.com/user-attachments/assets/51725313-d176-4285-8339-8c649409f06a" />
+
+
 Several supervised and unsupervised machine learning algorithms were fitted and compared, including:  
 
 - Balanced Random Forest (**BRF**)
