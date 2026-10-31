@@ -1,9 +1,11 @@
 ## **PROJECT SUMMARY**
 
 The primary objective of this proejct was to to develop and compare different machine learning models to detect flight anomalies for commercial aircraft.
-The second objective was to determine the factors contributing to the risk of flight anomalies. The project used the **NASA DASHlink Multi-Class Anomaly Classification Dataset**. The dataset was made publicly available through NASA's DASHlink repository. It contains flight trajectories during approach to landing classified as **Nominal, Speed High, Path High, and Flaps Late**. For this project, the three anomalous classes were combined into a single anomaly class to formulate the problem as binary anomaly detection. The time-series observations for each flight were then aggregated into flight-level features using the **mean and standard deviation** of the selected flight variables.
+The second objective was to determine the factors contributing to the risk of flight anomalies. The project used the **NASA DASHlink Multi-Class Anomaly Classification Dataset**. The dataset was made publicly available through NASA's DASHlink repository. It contains flight trajectories during approach to landing classified as **Nominal, Speed High, Path High, and Flaps Late**. For this project, the three anomalous classes were combined into a single anomaly class to formulate the problem as binary anomaly detection. The time-series observations for each flight were then aggregated into flight-level features using the **mean and standard deviation** of the selected flight variables. Exploratory data analysis showed that anomalous flights accounted for **10%** of the total observations, indicating that the resulting binary target variable was **imbalanced**. 
 
-Exploratory data analysis showed that anomalous flights accounted for **10%** of the total observations, indicating that the resulting binary target variable was **imbalanced**. Several supervised and unsupervised machine learning algorithms were fitted and compared, including:  
+<img width="1618" height="972" alt="Image" src="https://github.com/user-attachments/assets/75bcb1bd-e7db-4342-99ba-d44e526c7823" />
+
+Several supervised and unsupervised machine learning algorithms were fitted and compared, including:  
 
 - Balanced Random Forest (**BRF**)
 - Isolation Forest (**IF**)
